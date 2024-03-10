@@ -2,19 +2,19 @@ import os
 from dotenv import load_dotenv
 import smtplib
 import email
-from main import sujeito 
+from get_email import endereco_email 
 
 load_dotenv()
 
 usuario = os.getenv("EMAILER")
 recebedor = os.getenv("RECEIVER")
 
-def enviar_email():  
-    corpo_email = sujeito
+def enviar_email(): 
+    corpo_email = """Olá, muito obrigado por me contatar, entrarei em contato em breve!"""
     msg = email.message.Message()
     msg['Subject'] = "Assunto"
     msg['From'] = usuario
-    msg['To'] = recebedor
+    msg['To'] = endereco_email
     senha = os.getenv("PASSWORD")
     msg.set_payload(corpo_email)
 
@@ -26,5 +26,3 @@ def enviar_email():
     print('Email enviado')
 
 enviar_email()
-
-
