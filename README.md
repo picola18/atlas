@@ -3,7 +3,8 @@ in its current state, but you do you.
 
 TO DO LIST:
 
-Add the Chatbot System
 Add Whatsapp Support
+
 Add Discord Support
+
 Make the interface
